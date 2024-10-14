@@ -10,7 +10,7 @@ import {
   DoubleSide,
   MeshBasicMaterial,
   ShaderMaterial,
-  sRGBEncoding,
+  SRGBColorSpace,
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Lamps from "./Lamps";
@@ -92,7 +92,7 @@ function Body() {
   const skills = textures.slice(2, 14);
   const lamps = textures[14];
   bakedMap.flipY = false;
-  bakedMap.encoding = sRGBEncoding;
+  bakedMap.colorSpace = SRGBColorSpace;
 
   const material = new MeshBasicMaterial({ map: bakedMap });
   const lampMaterial = new MeshBasicMaterial({ color: 0xffffe5 });
